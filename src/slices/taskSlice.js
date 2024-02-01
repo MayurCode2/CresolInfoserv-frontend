@@ -67,7 +67,14 @@ const taskSlice = createSlice({
       })
       .addCase(deleteTask.fulfilled, (state, action) => {
         // Remove the deleted task from the state
-        state.tasks = state.tasks.filter((task) => task._id !== action.payload);
+        const indexToDelete = state.tasks.findIndex((task) => task._id === action.payload);
+
+        // Remove the task from the state if found
+        if (indexToDelete !== -1) {
+          state.tasks = state.tasks.filter((task) => task._id !== action.payload);
+        }
+
+        
       })
       .addCase(updateTaskById.fulfilled, (state, action) => {
         // Update the state after successfully updating a task by ID

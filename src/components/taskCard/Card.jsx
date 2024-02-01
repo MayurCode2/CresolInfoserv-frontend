@@ -32,9 +32,9 @@ const Card = ({ _id, title: initialTitle, description: initialDescription, compl
     setIsEditing(false);
   };
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     // Dispatch action to delete task
-    dispatch(deleteTask(_id));
+    await dispatch(deleteTask(_id));
   };
 
   return (
