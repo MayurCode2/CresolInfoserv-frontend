@@ -1,0 +1,40 @@
+/* TaskComponent.css */
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px;
+  }
+  
+  .task-input {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px; /* Adjust the height as needed */
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px #66afe9;
+  }
+  
